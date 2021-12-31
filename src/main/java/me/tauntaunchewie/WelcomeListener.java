@@ -16,7 +16,7 @@ public class WelcomeListener implements Listener {
         if (player.hasPlayedBefore()) {
             player.sendMessage(ChatColor.GREEN + "Welcome back " + ChatColor.BOLD + ChatColor.YELLOW + player.getDisplayName() + "!");
 
-            if (player.hasPermission("heartplugin.spawnresethearts")) {
+            if (player.hasPermission("heartplugin.spawnresethearts") && HeartUtils.isEnabled()) {
                 HeartUtils.setPlayerHearts(player, player, HeartUtils.getOpBaseHeartCount());
             }
         }
@@ -24,7 +24,7 @@ public class WelcomeListener implements Listener {
         else {
             player.sendMessage(ChatColor.GREEN + "Thanks for stopping by, hope you like our little server " + ChatColor.BOLD + ChatColor.YELLOW + player.getDisplayName() + "!");
 
-            if (player.hasPermission("heartplugin.spawnresethearts")) {
+            if (player.hasPermission("heartplugin.spawnresethearts") && HeartUtils.isEnabled()) {
                 HeartUtils.setPlayerHearts(player, player, HeartUtils.getOpBaseHeartCount());
             }
         }

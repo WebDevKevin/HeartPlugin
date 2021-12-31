@@ -1,0 +1,22 @@
+name: HeartPlugin
+version: 1.0
+main: me.tauntaunchewie.HeartPlugin
+api-version: 1.18
+
+commands:
+  addlove:
+    description: Add Hearts to player
+    usage: /<command>
+    permission: heartplugin.seeplugin
+    permission-message: You do not have permission to execute that command.
+
+permissions:
+  heartplugin.seeplugin:
+    description: Basic ability to see the command
+    default: op
+  heartplugin.set:
+    description: Allows player to set heart level of individual player or all players
+    default: op
+  heartplugin.spawnresethearts:
+    description: On spawn resets player's hearts to server default (not game default)
+    default: op
